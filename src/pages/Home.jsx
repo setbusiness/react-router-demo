@@ -1,9 +1,19 @@
-import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
 
 function Home() {
+  const [searchParams, setSearchParams] = useSearchParams()
+  const name = searchParams.get('name')
+
+  useEffect(() => {
+    if (!name) {
+      setSearchParams({ name: 'John Doe' }, { replace: true })
+    }
+  }, [name, setSearchParams])
+
   return (
     <section className="content-card">
-      <h1>Bienvenue sur Demo</h1>
+      <h1>Bienvenue sur Demo {name ?? ''}</h1>
       <p>
         Cette application React utilise Vite et intègre React Router pour gérer la
         navigation entre plusieurs pages.
