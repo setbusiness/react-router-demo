@@ -25,6 +25,12 @@ function MainLayout() {
           >
             Utilisateurs
           </NavLink>
+          <NavLink
+            to="/protected"
+            className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+          >
+            Page protégée
+          </NavLink>
         </nav>
       </header>
       <main className="app-main">

@@ -163,6 +163,67 @@
   color: #0f172a;
 }
 
+.sample-link.emphasis {
+  background-color: #0f172a;
+  color: #fff;
+}
+
+.sample-link.emphasis:hover {
+  background-color: #1d4ed8;
+  color: #fff;
+}
+
+.auth-demo {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(203, 213, 225, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.primary-button {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.primary-button:hover {
+  background-color: #1d4ed8;
+}
+
+.secondary-button {
+  background-color: #e2e8f0;
+  color: #0f172a;
+}
+
+.secondary-button:hover:not(:disabled) {
+  background-color: #cbd5f5;
+}
+
+.secondary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .user-profile {
   display: flex;
   flex-direction: column;
@@ -218,6 +279,19 @@
   color: #0f172a;
 }
 
+.banner {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.banner.warning {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+}
+
 .about-panel h2 {
   margin-top: 0;
   font-size: 1.5rem;
@@ -258,4 +332,22 @@
   gap: 0.75rem;
   font-weight: 600;
   color: #475569;
+}
+
+.protected-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.token-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background-color: #0f172a;
+  color: #fff;
+  padding: 1rem 1.25rem;
+  border-radius: 0.85rem;
+  font-family: 'Fira Code', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
 }
